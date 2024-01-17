@@ -18,7 +18,7 @@ class Predictor(BasePredictor):
         text: str = Input(description="Enter any text here, try to be responsible"),
     ) -> str:
         """Run a single prediction on the model"""
-        input = self.tokenizer(input,return_tensors='pt')
+        input = self.tokenizer(text,return_tensors='pt')
         output = self.model.generate(**input,)
         return self.tokenizer.decode(output[0])
         # processed_input = preprocess(image)
