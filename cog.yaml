@@ -15,7 +15,7 @@ build:
 
   # a list of packages in the format <package-name>==<version>
   python_packages:
-    - "numpy==1.19.4"
+    - "numpy"
     - "torch"
     - "transformers==4.36.2"
 
