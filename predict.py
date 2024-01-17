@@ -15,7 +15,7 @@ class Predictor(BasePredictor):
 
     def predict(
         self,
-        input: str = Input(description="Enter any text here, try to be responsible"),
+        text: str = Input(description="Enter any text here, try to be responsible"),
     ) -> str:
         """Run a single prediction on the model"""
         input = self.tokenizer(input,return_tensors='pt')
